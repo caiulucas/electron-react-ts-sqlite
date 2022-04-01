@@ -2,6 +2,8 @@ import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 
+import '../src/database';
+
 let mainWindow: Electron.BrowserWindow | null;
 
 function createWindow() {
@@ -10,6 +12,7 @@ function createWindow() {
     height: 600,
     webPreferences: {
       nodeIntegration: true,
+      preload: path.resolve(__dirname, 'preload.js')
     },
   });
 
