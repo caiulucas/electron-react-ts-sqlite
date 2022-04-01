@@ -1,12 +1,9 @@
+import 'react-hot-loader';
 import React from 'react';
 import ReactDom from 'react-dom';
 
-const App = () => {
-  return (
-    <h1>
-      Hi from a react app
-    </h1>
-  )
-}
+import App from './App';
+
+import './index.css';
 
 ReactDom.render(<App />, document.getElementById('root'));
